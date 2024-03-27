@@ -13,21 +13,24 @@
 </head>
 
 <body>
+  
+  <div class="backgroundimg">
+    <img src="/img/backgroundimg.jpeg" alt="">
+  </div>
+
   <div id="welcomePage" class="container">
-    <h1 id="welcomeMessage" class="fw-bold">Welcome to Quiz App! <i class="fas fa-brain"></i></h1>
-    <div class="inputBox">
-      <input class="px-4 pt-2 mt-3" type="text" id="name" placeholder="Your name.." />
-      <i class="fas fa-user"></i>
+    <h1 id="welcomeMessage" class="fw-bold">TUFFY PRESENTS</h1>
+    <div class="imageBox mt-3">
+      <img src="./img/logoimg.png" alt="NBA trivia challenge logo" style="width: 100%; height: auto;">
+    </div>
+    <div class="inputBox mt-5">
+      <input class="px-4 pt-2" type="text" id="name" placeholder="Enter your name" style="width: 75%; height: auto; text-align: center;" />
     </div>
     <div class="btnBox mt-3">
-      <button id="start" class="btn btn-success px-3 pt-2" onclick="startQuiz()">
-        Start <i class="fas fa-play"></i>
-      </button>
-    </div>
-    <div class="imageBox mt-5">
-      <img class="welcomeImg w-50" src="quiz image.png" alt="" />
+      <button id="start" class="btn btn-primary" onclick="startQuiz()">Begin</i></button>
     </div>
   </div>
+
   <div id="quizPage" class="container bg-white card" style="display: none">
   </div>
   <div id="resultPage" class="container bg-white card" style="display: none"></div>
