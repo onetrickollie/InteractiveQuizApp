@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f0f0f !important;
+  transition: all 0.3s ease-in-out;
+}
+
+#welcomePage {
+  text-align: center;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+input[type="text"] {
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #fff;
+  margin-right: 0.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+#quizPage {
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  animation: slideIn 1s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#quizPage h3 {
+  margin: 3.5rem 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 1s;
+}
+
+#quizPage button {
+  border-radius: 10px;
+  height: auto;
+  max-width: 20rem !important;
+  background-color: #cccccc !important;
+  transition: 0.6s ease;
+}
+
+#quizPage button:hover {
+  background-color: #a19e9e !important;
+}
+
+#resultPage {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  animation: fadeIn 1s;
+}
+
+.resultMessage {
+  line-height: 3rem;
+}
+
+.correctAnswer {
+  color: green;
+  font-weight: bolder;
+}
+
+.wrongAnswer {
+  color: red;
+  font-weight: bolder;
+}
+
+.answerMessage {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #quizPage {
+    text-align: center;
+    width: 80vw !important;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  #quizPage h3 {
+    font-size: 1.2rem !important;
+  }
+
+  #quizPage button {
+    font-size: 0.9rem !important;
+  }
+}
