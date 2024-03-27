@@ -1,8 +1,8 @@
 const questionsData = [
   {
-    question: "What is the most popular programming language in 2023?",
-    options: ["Javascript", "Java", "C#", "Python", "Golang"],
-    answer: "Javascript",
+    question: "How many times did lebron lose in the NBA finals",
+    options: ["3","4","5","6","7"],
+    answer: "6",
   },
   {
     question: "What was the first web browser?",
@@ -75,19 +75,19 @@ const questionsData = [
   },
 ];
 
-let welcomeMessage = document.getElementById("welcomeMessage");
-const codesArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, "A", "B", "C", "D", "E", "F"];
+let welcMessage = document.getElementById("welcomeMessage");
+const colorSelection = [0, 1, 2, 3, 4, 5, 6, 7, 8, "A", "B", "C", "D", "E", "F"];
 
 const randomTextColor = () => {
   let hexCode = "#";
   for (let i = 0; i < 6; i++) {
-    hexCode += codesArr[Math.floor(Math.random() * codesArr.length)];
+    hexCode += colorSelection[Math.floor(Math.random() * colorSelection.length)];
   }
   return hexCode;
 };
 
 setInterval(() => {
-  welcomeMessage.style.color = randomTextColor();
+  welcMessage.style.color = randomTextColor();
 }, 500);
 
 let welcomePage = document.getElementById("welcomePage");
@@ -191,9 +191,9 @@ function getResult() {
 
 function startTimer() {
   let timerElement = document.getElementById("timer");
-  timerElement.innerHTML = `<i class="fas fa-stopwatch"></i> ${formatTime(90)}`;
+  timerElement.innerHTML = `<i class="fas fa-stopwatch"></i> ${formatTime(200)}`;
 
-  let timeRemaining = 90;
+  let timeRemaining = 200;
   timer = setInterval(() => {
     timeRemaining--;
     timerElement.innerHTML = `<i class="fas fa-stopwatch"></i> ${formatTime(
