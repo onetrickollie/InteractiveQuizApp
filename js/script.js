@@ -5,73 +5,73 @@ const questionsData = [
     answer: "6",
   },
   {
-    question: "What was the first web browser?",
+    question: "What happened on June 5th, 2008 ",
     options: [
-      "Internet Explorer",
-      "Google Chrome",
-      "Firefox",
-      "Netscape Navigator",
-      "Yandex",
+      "Paul Pierce faked an injury because he pooped himself",
+      "Lebron shot a freethrow with his eyes closed and missed",
+      "Thansis Triple-Double",
+      "D-Rose d rose",
+      "Larry bird's retirement",
     ],
-    answer: "Netscape Navigator",
+    answer: "Paul Pierce faked an injury because he pooped himself",
   },
   {
-    question: "What is the release date of Javascript?",
-    options: ["1995", "1996", "1997", "1998", "1999"],
-    answer: "1995",
+    question: "What team drafted Kobe Bryant",
+    options: ["Lakers","Celtics","Hornets","Thunder","Warriors"],
+    answer: "Hornets",
   },
   {
-    question: "Which is a CSS property?",
-    options: ["for loop", "if statement", "flexbox", "while", "switch-case"],
-    answer: "flexbox",
+
+    question: "What is Charles Barkley's least favorite city",
+    options: ["Dallas","San Antonio","Houston","Miami"],
+    answer: "San Antonio",
   },
   {
-    question: "Which is the Javascript library?",
-    options: ["React", "Angular", "Vue", "Ember", "Blazor"],
-    answer: "React",
+    question: "How many points did Lebron think Kobe was going to drop",
+    options: ["50","60","70","80"],
+    answer: "70",
   },
   {
-    question: "What is the most popular database management system?",
-    options: ["Oracle", "SQL Server", "PostgreSQL", "SQLLite", "MySQL"],
-    answer: "MySQL",
+    question: "Who has the most rings in the following selections",
+    options: ["Tracy McGrady","Charles Barkley","Jeremy Lin","Vince Carter","Chris Paul"],
+    answer: "Jeremy Lin",
   },
   {
-    question: "Which is not a backend technologies approach?",
-    options: ["MERN", "MEVN", "LAMP", ".NET", "Tensorflow"],
-    answer: "Tensorflow",
+    question: "Which one of these players was drafted before Kobe Bryant in the 1996 NBA draft",
+    options: ["Steve Nash","Jeremain O'neal","Derek Fisher","Kerry Kittles","Dick Barret"],
+    answer: "Kerry Kittles",
   },
   {
-    question: "What does HTTP stand for?",
+    question: "How many fingers does Gereald Green have",
     options: [
-      "Hypertext Transfer Protocol",
-      "Hyper Text Transmission Protocol",
-      "Hyper Transfer Transmission Protocol",
-      "Hyper Text Transfer Processes",
-      "Hyper Transfer Transmission Processes",
+      "10",
+      "11",
+      "9",
+      "8",
     ],
-    answer: "Hypertext Transfer Protocol",
+    answer: "9",
   },
   {
-    question: 'What is the long form of "CRUD"?',
+    question: "Which NBA final did JR Smith drink too much Henny before playing",
     options: [
-      "CREATE REMOVE UPDATE DELETE",
-      "CREATE READ UPDATE DELETE",
-      "CREATE REMOVE UPDATE DATA",
-      "CREATE RESET UPDATE DELETE",
-      "CREATE RESET UPDATE DATA",
+      "2015",
+      "2016",
+      "2017",
+      "2018",
+      "2014",
     ],
-    answer: "CREATE READ UPDATE DELETE",
+    answer: "2018",
   },
   {
-    question: "What is the long form of NoSQL?",
+    question: "Charles Barkley rubs what on his bellybutton to moisturize his lips",
     options: [
-      "No SQL",
-      "Not only SQL",
-      "Not One SQL",
-      "Notation SQL",
-      "Number One SQL",
+      "Baby Oil",
+      "Olive Oil",
+      "Vaseline",
+      "WD-40",
+      "A drop of tequilla",
     ],
-    answer: "Not only SQL",
+    answer: "Vaseline",
   },
 ];
 
@@ -93,11 +93,26 @@ setInterval(() => {
 let welcomePage = document.getElementById("welcomePage");
 let quizPage = document.getElementById("quizPage");
 let resultPage = document.getElementById("resultPage");
+let loginPage = document.getElementById("loginPage");
 
 let answers = [];
 let current = 0;
 let isAnswered = false;
 let timer;
+
+
+function login() {
+  let usernameInput = document.getElementById("username");
+  let username = usernameInput.value.trim();
+
+  if (username !== "") {
+    loginPage.style.display = "none";
+    quizPage.style.display = "block";
+    startQuiz(username);
+  } else {
+    alert("Please enter your name.");
+  }
+}
 
 function startQuiz() {
   let nameInput = document.getElementById("name");
@@ -211,3 +226,6 @@ function formatTime(seconds) {
   let secs = seconds % 60;
   return `${mins < 10 ? "0" : ""}${mins}:${secs < 10 ? "0" : ""}${secs}`;
 }
+
+
+// Rest of your existing code
