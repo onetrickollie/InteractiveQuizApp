@@ -1,77 +1,53 @@
 const questionsData = [
   {
-    question: "How many times did lebron lose in the NBA finals",
-    options: ["3","4","5","6","7"],
-    answer: "6",
+    question: "Which NBA player did not make an apperance in the movie 'Uncle Drew'?",
+    options: ["Dikembe Mutombo", "Aaron Gordon", "Carmelo Anthony", "Nate Robinson"],
+    answer: "Carmelo Anthony",
   },
   {
-    question: "What happened on June 5th, 2008 ",
-    options: [
-      "Paul Pierce faked an injury because he pooped himself",
-      "Lebron shot a freethrow with his eyes closed and missed",
-      "Thansis Triple-Double",
-      "D-Rose d rose",
-      "Larry bird's retirement",
-    ],
-    answer: "Paul Pierce faked an injury because he pooped himself",
+    question: "Which NBA player did not attend UCLA",
+    options: ["Kevon Looney", "Zach LaVine", "Brandon Ingram", "Jrue Holiday"],
+    answer: "Brandon Ingram",
   },
   {
-    question: "What team drafted Kobe Bryant",
-    options: ["Lakers","Celtics","Hornets","Thunder","Warriors"],
-    answer: "Hornets",
+    question: "What is the name of Chris Paul's alter ego in State Farm commercials?",
+    options: ["Cliff Paul", "Carl Paul", "Chuck Paul", "Chris Paul Jr."],
+    answer: "Cliff Paul",
   },
   {
-
-    question: "What is Charles Barkley's least favorite city",
-    options: ["Dallas","San Antonio","Houston","Miami"],
-    answer: "San Antonio",
+    question: "What is the name of Kobe Bryant's short film that won an Academy Award in 2018?",
+    options: ["Dear Basketball", "The Black Mamba", "Kobe: The Legend Continues", "Mamba Mentality"],
+    answer: "Dear Basketball",
   },
   {
-    question: "How many points did Lebron think Kobe was going to drop",
-    options: ["50","60","70","80"],
-    answer: "70",
+    question: "Which NBA player holds the record for most triple-doubles in a season?",
+    options: ["Nikola Jokić", "James Harden", "Russel Westbrook", "Magic Johnson"],
+    answer: "Russel Westbrook",
   },
   {
-    question: "Who has the most rings in the following selections",
-    options: ["Tracy McGrady","Charles Barkley","Jeremy Lin","Vince Carter","Chris Paul"],
-    answer: "Jeremy Lin",
+    question: "Which NBA player owns a Krispy Kreme doughnut franchise?",
+    options: ["Michael Jordan", "Stephen Curry", "Magic Johnson", "Shaq"],
+    answer: "Shaq",
   },
   {
-    question: "Which one of these players was drafted before Kobe Bryant in the 1996 NBA draft",
-    options: ["Steve Nash","Jeremain O'neal","Derek Fisher","Kerry Kittles","Dick Barret"],
-    answer: "Kerry Kittles",
+    question: "Which NBA player appeared in a cameo role in the movie 'Trainwreck'?",
+    options: ["Kevin Love", "Stephen Curry", "Kevin Durant", "LeBron James"],
+    answer: "LeBron James",
   },
   {
-    question: "How many fingers does Gereald Green have",
-    options: [
-      "10",
-      "11",
-      "9",
-      "8",
-    ],
-    answer: "9",
+    question: "Who is not a brother of Giannis Antetokounmpo'?",
+    options: ["Pascal Antetokounmpo", "Francis Antetokounmpo", "Kostas Antetokounmpo", "Alex Antetokounmpo"],
+    answer: "Pascal Antetokounmpo",
   },
   {
-    question: "Which NBA final did JR Smith drink too much Henny before playing",
-    options: [
-      "2015",
-      "2016",
-      "2017",
-      "2018",
-      "2014",
-    ],
-    answer: "2018",
+    question: "Which NBA player famously scored 81 points in a single game?",
+    options: ["Kobe Bryant", "LeBron James", "Kevin Durant", "Stephen Curry"],
+    answer: "Kobe Bryant",
   },
   {
-    question: "Charles Barkley rubs what on his bellybutton to moisturize his lips",
-    options: [
-      "Baby Oil",
-      "Olive Oil",
-      "Vaseline",
-      "WD-40",
-      "A drop of tequilla",
-    ],
-    answer: "Vaseline",
+    question: "How many NBA championships has Magic Johnson won as a player?",
+    options: ["4", "5", "6", "7"],
+    answer: "5",
   },
 ];
 
@@ -128,7 +104,7 @@ function startQuiz() {
 function getQuestions() {
   let question = questionsData[current];
   quizPage.innerHTML = `
-    <div id="timer" class="mb-3">
+    <div id="timer" class="mb-2">
       <i class="fas fa-stopwatch"></i> ${formatTime(90)}
     </div>
     <h3 style='margin-bottom:2rem'>${question.question}</h3>
@@ -188,7 +164,7 @@ function getResult() {
   let resultMessage = `Congratulations ${name}! <br/>You answered
   <span class='correctAnswer'>${correctAnswers}</span> out of
   ${questionsData.length} questions correctly.<br/> 
-  <button class='playAgain btn btn-warning mt-4'>Play Again</button>`;
+  <button class='playAgain btn btn-primary mt-4'>Play the quiz again</button>`;
 
   quizPage.style.display = "none";
   resultPage.style.display = "block";
@@ -226,6 +202,3 @@ function formatTime(seconds) {
   let secs = seconds % 60;
   return `${mins < 10 ? "0" : ""}${mins}:${secs < 10 ? "0" : ""}${secs}`;
 }
-
-
-// Rest of your existing code
